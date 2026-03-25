@@ -1,95 +1,174 @@
-Keystroke Logging Demonstration                                                               
-📌 Project Overview                                                                                                                
+# KeyStroke Sentinel - Secure Keyboard Activity Visualizer
 
-The Keystroke Logging Demonstration project provides hands-on exposure to system-level keyboard input monitoring at the operating system level. This project is developed strictly for educational and defensive cybersecurity purposes, enabling learners to understand keystroke-based attack techniques and how such threats can be detected and prevented in real-world environments.
+A **safe, educational Tkinter-based keyboard activity visualizer** that helps users understand how keyboard events work in real-time.  
+It captures and displays **Pressed**, **Held**, and **Released** key events **only inside the app’s own typing area**, making it ideal for **learning, demonstrations, and cyber security awareness**.
 
-The application captures keyboard input events in real time, demonstrating how keystroke logging operates while emphasizing ethical use and cybersecurity awareness.                                               
+> **Important:** This project is designed for **ethical, educational, and authorized use only**. It **does not monitor other applications or the operating system globally**.
 
-⌨️ Captured Keyboard Events                                                                                                    
+---
 
-The system records the following keyboard interactions:                                                                                  
+## Features
 
-Key Press                                                                              
+- **Safe Keyboard Event Monitoring**
+  - Tracks keys **only within the application’s text box**
+  - No system-wide or background capture
 
-Key Hold                                                                                
+- **Live Event Visualization**
+  - Displays:
+    - `Pressed`
+    - `Held`
+    - `Released`
 
-Key Release                                                                                                   
+- **Automatic Logging**
+  - Saves readable key activity to:
+    - `logs.txt`
+  - Saves structured event data to:
+    - `logs.json`
 
-All captured events are stored in:                                                                                              
+- **Session Summary Export**
+  - Exports summary information to:
+    - `summary.json`
 
-JSON format — for structured data analysis                                                                                     
+- **Interactive GUI**
+  - Start Logging
+  - Stop Logging
+  - Clear Logs
+  - View Saved Logs
+  - Export Summary
+  - Exit
 
-Text format — for human-readable interpretation                                                                      
+- **Real-Time Stats**
+  - Shows current logging status
+  - Displays total number of key events captured
 
-A Tkinter-based Graphical User Interface (GUI) is included to control execution ethically and responsibly.                                                                           
+---
 
-✨ Key Features                                                                                                                   
+## Technologies Used
 
-Real-time keystroke monitoring                                                                                                
+- **Python 3**
+- **Tkinter**
+- **JSON**
+- **File Handling**
 
-Captures press, hold, and release events                                                                                                     
+---
 
-Supports alphanumeric and special keys                                                                                                                
+## Project Structure
 
-Structured logging using JSON                                                                                                                            
+```bash
+KeyStroke-Sentinel/
+│
+├── keylogger.py        # Main application
+├── logs.txt            # Human-readable saved keystrokes
+├── logs.json           # Structured keyboard event logs
+├── summary.json        # Session summary report
+└── README.md           # Project documentation
+```
 
-Readable text-based logs                                                                    
-          
-GUI-controlled execution using Tkinter                                                                                                      
+## How to Run
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
+```
+### 2. Run the Python file
+```bash
+python keylogger.py
+```
+- Make sure Python 3 is installed on your system.
 
-Ethical and educational implementation                                                                                                                                           
+## How It Works
+- Launch the application.
+- Click Start Logging.
+- Type inside the input box provided in the GUI.
+### The app will:
+- Show live keyboard events
+- Save logs automatically
+- Click Stop Logging to stop monitoring.
+### Use:
+- View Saved Logs to inspect saved content
+- Export Summary to save session details
+- Output Files
+- logs.txt
 
-🛠️ Technologies Used                                                                                                                                                                           
+- Stores typed content in a human-readable format.
 
-Python                                                                                                                                          
+### Example:
+```bash
+hello world
+logs.json
+```
+- Stores keyboard activity in structured JSON format.
 
-pynput                                                                                                                                       
+### Example:
+```bash
+[
+    {
+        "Pressed": "h"
+    },
+    {
+        "Held": "h"
+    },
+    {
+        "Released": "h"
+    }
+]
+```
+- summary.json
 
-JSON                                                                                                                                        
+### Stores a session summary.
 
-File Handling                                                                                                         
+### Example:
+```bash
+{
+    "total_events": 18,
+    "session_duration_seconds": 12.45,
+    "last_key": "d",
+    "all_keys": "hello world"
+}
+```
+---
 
-Tkinter                                                                                               
+## Use Cases
+- Python GUI practice
+- Keyboard event handling demonstration
+- Cyber security awareness presentations
+- Educational workshops
+- Mini project / internship submission
 
-📁 Folder & File Structure                                                                                        
-Keystroke-Logging-Demonstration/                                                                                                        
-│                                                                                                                                        
-├── keylogger.py          # Core keystroke logging logic                                                                                                     
-├── keylogger_gui.py      # GUI-based execution using Tkinter                                                                                                                   
-├── logs.json             # Example JSON output (sample data only)                                                                                      
-├── logs.txt              # Example text output (sample data only)                                                                                                
-├── requirements.txt      # Project dependencies                                                                                                                 
-├── README.md             # Project documentation                                                                                                  
+## Safety & Ethical Notice
 
+### This application is intentionally built as a safe educational demo:
 
-Note:                                                                                                                                    
-The logs.json and logs.txt files contain only sample/demo data and do not store real user information.                                                                               
+- It does not capture keyboard input outside the application
+- It does not run silently in the background
+- It is intended only for learning, testing, and demonstration
 
-🎯 Learning Outcomes                                                                                                                                 
+### Please do not modify or use this type of concept for:
+- unauthorized monitoring
+- privacy invasion
+- credential capture
+- surveillance without consent
 
-By completing this project, learners gain:                                                                                                                               
+### Use responsibly and ethically.
 
-Understanding of system-level keyboard event handling                                                                                                                  
+## Future Enhancements
 
-Awareness of keystroke-based cybersecurity threats                                                                                         
+### Possible upgrades for future versions:
 
-Hands-on experience with structured logging using JSON                                                                                                                   
+- Dark mode UI
+- Typing speed analytics
+- Graph-based session reports
+- Timestamped event logging
+- Export to CSV / PDF
+- Search and filter logs
+- Improved dashboard design
+  ---
+## Author
 
-Practical exposure to GUI-based cybersecurity tools                                                                                                                   
+### Indrasen Singh
+### B.Tech CSE Student | Web Developer | ML & AI Enthusiast | Creative Coder
 
-Knowledge of ethical considerations in security research                                                                                                                                
+## License
 
-🏢 Internship Information                                                                                                                        
-
-This project was developed as part of a Cybersecurity Internship conducted by Edunet Foundation under the VOIS for Tech Program, supported by AICTE.                                         
-
-Internship Duration: December 2025 – January 2026                                                                                                               
-
-Internship Mode: Project-based learning with mentor guidance                                                                                                                      
-                                           
-The project was completed solely for academic and learning purposes, in full compliance with internship guidelines and ethical standards.                                                                         
-
-👤 Author                                                                        
-
-Indrasen Singh                                                                                                  
-                                                                                                                                                                                                                           
+- This project is intended for educational use.
+- You may customize it for learning and demonstration purposes.
