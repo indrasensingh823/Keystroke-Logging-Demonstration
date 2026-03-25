@@ -1,0 +1,1 @@
+<Shift_L> Hello  <Shift_L> World <Shift_L>  <exclam>
